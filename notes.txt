@@ -1,0 +1,3 @@
+npm install -g @angular/cli to install angular
+ng new angularapp to create a new angular app in the current directory
+ng serve --open to start the server in the browser
