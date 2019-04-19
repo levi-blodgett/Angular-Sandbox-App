@@ -13,5 +13,24 @@ import {Component} from '@angular/core';
 })
 
 export class UserComponent {
+   // Properties
+   firstName = 'John';
+   lastName = 'Doe';
+   age = 30;
 
+   // Methods
+   constructor() {
+      this.sayHello();
+      this.hasBirthday();
+   }
+
+   sayHello() {
+      console.log(`Hello ${this.firstName}`);
+   }
+
+   hasBirthday() {
+      console.log(this.age);
+      this.age += 1;
+      console.log(`Happy Birthday! You are now ${this.age} years old, don't die on us now!`);
+   }
 }

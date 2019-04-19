@@ -5,3 +5,5 @@ ng serve --open to start the server in the browser
 Components - The bulk of Angular apps, each piece of the UI can be organized to contain a class and a template, and the class and template can be bound to each other different ways, and each piece is their own component.
 Why components? Code organization, break up the UI, contain properties and methods, better teamwork, and it promotes reusability.
 ng g component components/my-component to generate components with Angular-CLI
+
+Constructors automatically run when page is loaded, so they are often used to instantiate things.
