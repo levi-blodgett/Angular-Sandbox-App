@@ -1,1 +1,6 @@
-<h2>John Doe</h2>
+<h2>{{ firstName }} {{ lastName }}</h2>
+<ul>
+   <!-- Age shows as 31 because the constructor runs automatically -->
+   <li>Age: {{ age }}</li> 
+   <li>Address: {{ address.street }} {{ address.city }}, {{ address.state }}</li>
+</ul>
