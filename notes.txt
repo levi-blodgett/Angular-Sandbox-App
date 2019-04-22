@@ -7,3 +7,5 @@ Why components? Code organization, break up the UI, contain properties and metho
 ng g component components/my-component to generate components with Angular-CLI
 
 Constructors automatically run when page is loaded, so they are often used to instantiate things.
+
+Types (part of TypeScript), help with errors by making sure you don't assign a string to a number and such.
