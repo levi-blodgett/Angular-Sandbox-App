@@ -12,3 +12,7 @@ ng g component components/my-component to generate components with Angular-CLI
 Constructors automatically run when page is loaded, so they are often used to instantiate things.
 
 Types (part of TypeScript), help with errors by making sure you don't assign a string to a number and such.
+
+To change the "app" it is looking at, change the app.component.html from "app-user" to "app-users" or vice versa.
+
+ngFor = like an attribute, need to use an asterisk before it, it is called a structural directive. See "users.component.html" for an example of it in use.
