@@ -13,6 +13,7 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAdd: boolean = true;
   currentClasses = {};
+  currentStyles = {};
 
   constructor() { }
 
@@ -65,11 +66,13 @@ export class UsersComponent implements OnInit {
     this.addUser(
       {
         firstName: 'David',
-        lastName: 'Jackson'
+        lastName: 'Jackson',
+        image: 'http://lorempixel.com/600/600/people/8',
       }
     );
 
     this.setCurrentClasses();
+    this.setCurrentStyles();
   };
 
   addUser(user: User) {
@@ -82,6 +85,14 @@ export class UsersComponent implements OnInit {
       'btn-success': this.enableAdd,
       'btn-light': this.enableAdd === false,
       'big-text': this.showExtended
+    }
+  }
+
+  setCurrentStyles() {
+    this.currentStyles = {
+      // If showExtended is true, have top padding be 0, else make the top padding 40px
+      'padding-top': this.showExtended ? '0' : '40px',
+      'font-size': this.showExtended ? '' : '40px'
     }
   }
 
