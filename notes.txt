@@ -4,7 +4,8 @@ ng serve --open to start the server in the browser
 ng generate component components/users = ng g c components/users
 ng g c components/users to create ts, html, css, spec files
 ng g c components/users skipTests to not create the spec file
-npm install bootstrap to install bootstrap into the project
+npm install bootstrap to install bootstrap into the project - do not forget to update styles and scripts in angular.json
+npm install font-awesome to install font-awesome into the project - do not forget to update styles and scripts in angular.json
 
 Components - The bulk of Angular apps, each piece of the UI can be organized to contain a class and a template, and the class and template can be bound to each other different ways, and each piece is their own component.
 Why components? Code organization, break up the UI, contain properties and methods, better teamwork, and it promotes reusability.
