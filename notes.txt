@@ -19,3 +19,9 @@ To change the "app" it is looking at, change the app.component.html from "app-us
 ngFor = like an attribute, need to use an asterisk before it, it is called a structural directive. See "users.component.html" for an example of it in use.
 
 To make something optional, put a "?" immediately following the variable.
+
+Events in angular are done by doing (click)="fireEvent($event)
+(click) being the event it is listening for
+fireEvent being the name of the function it will call
+$event being the event passed through as a value when clicked
+
