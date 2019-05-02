@@ -26,3 +26,10 @@ Events in angular are done by doing (click)="fireEvent($event)
 fireEvent being the name of the function it will call
 $event being the event passed through as a value when clicked
 
+ngModel = Used to bind data, and it needs to have modules added for it, since it isn't automatically included in NgModule:
+"
+import { FormsModule } from '@angular/Forms';
+imports: [
+   FormsModule
+]
+"
