@@ -33,3 +33,19 @@ imports: [
    FormsModule
 ]
 "
+
+Services:
+- Class that can send functionality and data across multiple components
+- Keeps components lean
+- DRY - Don't repeat yourself
+- Ideal place for Ajax calls using HTTP module
+
+How to create a service:
+Create a new file - /services/my-service.service.ts
+Import @Injectable and create classAdd as a provider to @NgModule
+Call from component(s)
+
+Generate service with Angular-CLI:
+"ng g service services/my-service" - Creates service file and class
+Add the "--module=app.module" flag to automatically add as a provider
+Add the "--spec=false" flag to not create the spec file
