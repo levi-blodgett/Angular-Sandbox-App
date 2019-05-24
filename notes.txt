@@ -48,4 +48,10 @@ Call from component(s)
 Generate service with Angular-CLI:
 "ng g service services/my-service" - Creates service file and class
 Add the "--module=app.module" flag to automatically add as a provider
-Add the "--spec=false" flag to not create the spec file
+Add the "skipTests" flag to not create the spec file
+
+Generate a posts component files:
+ng g c components/posts skipTests
+
+Generate a post service:
+ng g s services/post --module-app.module --spec=false
