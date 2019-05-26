@@ -50,8 +50,11 @@ Generate service with Angular-CLI:
 Add the "--module=app.module" flag to automatically add as a provider
 Add the "skipTests" flag to not create the spec file
 
-Generate a posts component files:
+Generate posts component files:
 ng g c components/posts skipTests
 
 Generate a post service:
-ng g s services/post --module-app.module --spec=false
+ng g s services/post --module-app.module skipTests
+
+Generate post-form component files:
+ng g c components/post-form skipTests
