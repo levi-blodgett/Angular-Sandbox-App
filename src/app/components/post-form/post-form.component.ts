@@ -31,7 +31,6 @@ export class PostFormComponent implements OnInit {
 
   updatePost(title, body) {
     this.postService.updatePost(this.currentPost).subscribe(post => {
-      console.log(post);
       this.isEdit = false;
       this.updatedPost.emit(post);
     });
