@@ -62,3 +62,23 @@ ng g c components/post-form skipTests
 
 Output is signified by ()
 Input is signified by []
+
+Angular Router:
+- Handles navigation from one component to another
+- Mimics loading separate pages via browserIncludes back button functionality
+- Most Angular apps are SPA (single-page-applications), since they usually only have one html file, use the router to make it appear like there are multiple
+
+Steps to use Angular Router:
+1. Create app-routing module
+2. Import RouterModule
+3. Create routes
+4. Router outlet
+5. Add links
+
+Every index.html has a '<base href="/">', a root url.
+
+To create a routerLink you don't use the href, you use the routerLink attribute like so:
+<a class="nav-link" href="#" routerLink="/">Home</a>
+
+Then you add Outlet to app.component:
+<router-outlet></router-outlet>
