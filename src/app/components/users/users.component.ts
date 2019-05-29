@@ -18,35 +18,22 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAdd: boolean = false;
   showUserForm: boolean = false;
-  @ViewChild('userForm') form: any;
+  @ViewChild('userForm', {static: false}) form: any;
   data: any;
 
-  constructor(private _userService: UserService) {  }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this._userService.getData().subscribe(data => {
-      console.log(data);
-    });
-
-    this._userService.getUsers().subscribe(users => {
-      this.users = users;
-      this.loaded = true;
-    });
+      this.userService.getData().subscribe(data => {
+        console.log(data);
+      });
+   
+      this.userService.getUsers().subscribe(users => {
+        this.users = users;
+        this.loaded = true;
+      });
 
   }
-
-  // addUser() {
-  //   this.user.isActive = true;
-  //   this.user.registered = new Date();
-
-  //   this.users.unshift(this.user);
-
-  //   this.user = {
-  //     firstName: '',
-  //     lastName: '',
-  //     email: ''
-  //   }
-  // }
 
   onSubmit({value, valid}: {value: User, valid: boolean}) {
     if(!valid){
@@ -56,10 +43,11 @@ export class UsersComponent implements OnInit {
       value.registered = new Date();
       value.hide = true;
 
-      this._userService.addUser(value);
+      this.userService.addUser(value);
 
       this.form.reset();
     }
   }
 
+  
 }
