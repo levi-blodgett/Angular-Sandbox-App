@@ -1,5 +1,6 @@
-npm install -g @angular/cli to install angular
-npm install - installs the project you are in
+
+npm install -g @angular/cli@latest to install angular (you'd get 'bash: ng: command not found' error if you didn't have it installed)
+npm install - installs the project you are in (if this isn't done, no node_modules folder)
 ng new angularapp to create a new angular app in the current directory
 ng serve --open to start the server in the browser
 ng generate component components/users = ng g c components/users
@@ -7,6 +8,21 @@ ng g c components/users to create ts, html, css, spec files
 ng g c components/users skipTests to not create the spec file
 npm install bootstrap to install bootstrap into the project - do not forget to update styles and scripts in angular.json
 npm install font-awesome to install font-awesome into the project - do not forget to update styles and scripts in angular.json
+
+If you get an error saying:
+"
+Your global Angular CLI version (X.Y.Z) is greater than your local version (A.B.C). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+"
+
+You could correct it by updating it by typing inside the project you are in:
+"
+npm install --save-dev @angular/cli@latest
+"
+
+The global install is needed to start a new application. The ng new <app-name> command is run using the global installation of the CLI.
+The local install of the CLI is used after an application has been built. This way, when new versions of the CLI are available, you can update your global install, and not affect the local install.
 
 Components - The bulk of Angular apps, each piece of the UI can be organized to contain a class and a template, and the class and template can be bound to each other different ways, and each piece is their own component.
 Why components? Code organization, break up the UI, contain properties and methods, better teamwork, and it promotes reusability.
@@ -82,3 +98,14 @@ To create a routerLink you don't use the href, you use the routerLink attribute 
 
 Then you add Outlet to app.component:
 <router-outlet></router-outlet>
+
+To create a new routing module:
+ng g m app-routing --flat --module-app
+
+Generate a home component for routing:
+ng g c components/home --spec=false
+
+If you get an error when starting server about ___:
+"
+npm install --save-dev @angular-devkit/build-angular
+"
