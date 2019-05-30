@@ -5,7 +5,7 @@ ng new angularapp to create a new angular app in the current directory
 ng serve --open to start the server in the browser
 ng generate component components/users = ng g c components/users
 ng g c components/users to create ts, html, css, spec files
-ng g c components/users skipTests to not create the spec file
+ng g c components/users --skipTests to not create the spec file
 npm install bootstrap to install bootstrap into the project - do not forget to update styles and scripts in angular.json
 npm install font-awesome to install font-awesome into the project - do not forget to update styles and scripts in angular.json
 
@@ -68,13 +68,13 @@ Add the "--module=app.module" flag to automatically add as a provider
 Add the "skipTests" flag to not create the spec file
 
 Generate posts component files:
-ng g c components/posts skipTests
+ng g c components/posts --skipTests
 
 Generate a post service:
-ng g s services/post --module-app.module skipTests
+ng g s services/post --module-app.module --skipTests
 
 Generate post-form component files:
-ng g c components/post-form skipTests
+ng g c components/post-form --skipTests
 
 Output is signified by ()
 Input is signified by []
@@ -103,7 +103,7 @@ To create a new routing module:
 ng g m app-routing --flat --module-app
 
 Generate a home component for routing:
-ng g c components/home --spec=false
+ng g c components/home --skipTests
 
 If you get an error when starting server about ___:
 "
